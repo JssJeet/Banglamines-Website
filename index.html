@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banglamines</title>
+    <link rel="icon" type="image/png" href="media/favicon.png">
+    <link rel="stylesheet" href="media/style.css">
+    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <nav class="desktop_navbar">
+      <a href="#"><img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
+      <a href="#info" class="desktop_navbar_link scroll">Server Info</a>
+      <a href="#rank" class="desktop_navbar_link scroll">Server Ranks</a>
+      <a href="#discord" class="desktop_navbar_link scroll">Community</a>
+      <a href="#about" class="desktop_navbar_link scroll">Staff Team</a>
+      <a href="#vote" class="desktop_navbar_link scroll">Vote Us</a>
+      <div class="desktop_navbar_link2_div">
+          <a href="#join" class="desktop_navbar_link2 scroll">Join Us!</a>
+      </div>
+    </nav>
+    <div class="mobile_navbar">
+      <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
+      <div id="mobile_navbar_links">
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="#info">Server Info</a>
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="#rank">Server Ranks</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Community</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">Staff Team</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#vote">Vote Us</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">Join Us</a>
+        </div>
+        <div class="icon" onclick="mobile_navbar_link_hider()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <script>
+            function mobile_navbar_link_hider() {
+            var x = document.getElementById("mobile_navbar_links");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+            } 
+        </script>
+    </div>
+    <div class="mainflex">
+      <div class="main1">
+        <a class="main1_logo_a" href="#">
+          <img class="main1_logo" src="media/logo.png" alt="logo"></a>
+        
+        <div class="main1_description">
+          <a>Welcome to</a>
+          <br>
+          <a class="main1_actcent">Banglamines official Website</a><a>.</a>
+        </div>
+        <div class="main1_ipcopier_div">
+          <button class="main1_ipcopier" onclick="copyText()" type="button">
+            <span class="main1_ipcopier_text1">play.banglamines.fun</span>
+            <br>
+            <span class="main1_ipcopier_text1">Port: 1913</span>
+          </button>
+          <script>
+            function copyText() {
+                navigator.clipboard.writeText
+            ("play.banglamines.fun");
+                }
+            $(document).ready(function() {
+            $('.main1_ipcopier').click(function() {
+                var popup = $('<div>', { class: 'main1_popup' })
+                .append($('<h3 class="copy_confirm">').text('Copied IP to clipboard'))
+                $(this).after(popup);
+                setTimeout(function() {
+                popup.remove();
+                }, 1000);
+            });
+            });
+        </script>
+        </div>
+        <a href="#more" class="scroll">
+          <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
+        </a>
+        <script>
+          const scrollLinks = document.querySelectorAll('.scroll');
+          scrollLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+              event.preventDefault();
+              const target = document.querySelector(link.getAttribute('href'));
+              const offsetTop = target.offsetTop;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
+            });
+          });
+        </script>
+      </div>
+      <div id="more"></div>
+      <div id="info"></div>
+
+<!----------------------  Game Modes --------------------------->
+
+      <div class="main2">
+        <a class="headline">Gamemodes</a>
+        <div class="main2_features_div">
+          <div class="gm_feature">
+            <img class="gm_feature_img" alt="Feature Image" src="media/survival.jpg">
+            <a class="gm_feature_headline">Survival</a>
+            <a class="gm_feature_text">Immerse yourself in a dynamic landscape, explore diverse biomes, and enjoy exciting features. No custom mobs – just pure, thrilling survival!</a>
+          </div>
+          <div class="gm_feature">
+            <img class="gm_feature_img" alt="Feature Image" src="media/placeholder.png">
+            <a class="gm_feature_headline">Coming Soon</a>
+            <a class="gm_feature_text"><!--Feature description--></a>
+          </div>
+        </div>
+
+<!------------------------------------------------->
+
+<!---------------------- Server Menu --------------------------->
+
+      <div class="main2">
+        <a class="headline">Server Features</a>
+        <div class="main2_features_div">
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/crack.jpg">
+            <a class="main2_feature_headline">Crack Supported</a>
+            <a class="main2_feature_text">You can play from crack Minecraft </a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/cross.jpg">
+            <a class="main2_feature_headline">Cross Play</a>
+            <a class="main2_feature_text">You can play from any Minecraft edition</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/version.jpg">
+            <a class="main2_feature_headline">Multi Version</a>
+            <a class="main2_feature_text">You can play from Multiple Version</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/team.jpg">
+            <a class="main2_feature_headline">Team System</a>
+            <a class="main2_feature_text">You can make Team or join any Team</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/claim.jpg">
+            <a class="main2_feature_headline">Land Claim</a>
+            <a class="main2_feature_text">You can claim your land to protect it from theft</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/bank.png">
+            <a class="main2_feature_headline">Bank</a>
+            <a class="main2_feature_text">You can use Bank to save your money</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/auction.png">
+            <a class="main2_feature_headline">Auction</a>
+            <a class="main2_feature_text">You can sell your rare item in Auction</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/rank.png">
+            <a class="main2_feature_headline">Buyable Ranks</a>
+            <a class="main2_feature_text">You can buy ranks to improve your experience</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/vote.jpg">
+            <a class="main2_feature_headline">Vote Rewards</a>
+            <a class="main2_feature_text">You can get free Rewards daily by Voting</a>
+          </div>
+        </div>
+      </div>
+<!------------------------------------------------->
+
+<!---------------------- Ranks Menu --------------------------->
+<div id="rank"></div>
+<div class="main2">
+  <a class="headline">Server Ranks</a>
+  <div class="main2_features_div">
+    
+    <div class="rank_feature">
+      <img class="rank_feature_img" alt="Feature Image" src="media/ranks/Knight.png">
+      <a class="rank_feature_headline">Knight</a>
+      <a class="rank_feature_text"><br>
+    <section class="rank_feature_text">
+        <b>Commands:</b><br>
+             ▸ /enderchest - Use Enderchest by Cmd<br>
+             ▸ /workbench - Use Crafting Table by Cmd<br><br>
+    </section>
+    <section class="rank_feature_text">
+        <b>Perks:</b><br>
+            ▸ 1000৳<br>
+            ▸ Home set 3x<br>
+            ▸ Claim Block 1000x<br><br>
+    </section>
+    <section class="rank_feature_text">
+        <b>Rewards:</b><br>
+            ▸ Knight Kit<br>
+            ▸ Diamond 6x<br>
+            ▸ Iron Ingot 12x<br>
+            ▸ Common Crate Key 3x<br>
+            ▸ VIP Crate Key 3x<br>
+            ▸ Cooked Chicken 64x<br>
+            ▸ Golden Carrot 32x<br><br>
+    </section>
+    <section class="rank_feature_text">
+        <b>Cost:</b>
+            ▸ ৳120
+    </section></a>
+    <a href="https://discord.banglamines.fun" class="main4_dc_button_a">
+      <div class="main4_dc_button">Join Dc To Purchase</div>
+    </a>
+    </div>
+
+    <div class="rank_feature">
+      <img class="rank_feature_img" alt="Feature Image" src="media/ranks/Assassin.png">
+      <a class="rank_feature_headline">Assassin</a>
+      <a class="rank_feature_text">
+        <section class="rank_feature_text">
+          <b>Commands:</b><br>
+              ▸ /enderchest - Use Enderchest by Cmd<br>
+              ▸ /workbench - Use Crafting Table by Cmd<br>
+              ▸ /anvil | Use Anvil by Cmd <br>
+              ▸ /cartographytableh | Use Cartography Table by Cmd<br>
+              ▸ /grindstone | Use Grind Stone by Cmd<br>
+              ▸ /loom | Use Loom by Cmd<br>
+              ▸ /smithingtable | Use Smithing Table by Cmd<br>
+              ▸ /stonecutter | Use Stone Cutter by Cmd<br><br>
+      </section>
+      <section class="rank_feature_text">
+          <b>Perks:</b><br>
+              ▸ 2000৳<br>
+              ▸ Home set 4x<br>
+              ▸ Claim Block 2000x<br>
+      </section>
+      <section class="rank_feature_text">
+          <b>Rewards:</b><br>
+              ▸ Assassin Kit<br>
+              ▸ Diamond 12x<br>
+              ▸ Iron Ingot 24x<br>
+              ▸ Common Crate Key 3x<br>
+              ▸ VIP Crate Key 2x<br>
+              ▸ Rare Crate Key 1x<br>
+              ▸ Coocked Chicken 128x<br>
+              ▸ Golden Carrot 64x<br>
+              ▸ Enchanted Golden Apple 1x<br>
+      </section>
+      <section class="rank_feature_text">
+          <b>Cost:</b>
+              ▸ ৳200
+      </section></a>
+      <a href="https://discord.banglamines.fun" class="main4_dc_button_a">
+        <div class="main4_dc_button">Join Dc To Purchase</div>
+      </a>
+    </div>
+  </div>
+  
+  <div class="main2">
+    <div class="main2_features_div">
+      
+      <div class="rank_feature2">
+        <img class="rank_feature_img" alt="Feature Image" src="media/ranks/Warlord.png">
+        <a class="rank_feature_headline">Warlord</a>
+        <a class="rank_feature_text"><br>
+      <section class="rank_feature_text">
+          <b>Commands:</b><br>
+              ▸ /enderchest - Use Enderchest by Cmd<br>
+              ▸ /workbench - Use Crafting Table by Cmd<br>
+              ▸ /anvil | Use Anvil by Cmd<br>
+              ▸ /cartographytableh | Use Cartography Table by Cmd<br>
+              ▸ /grindstone | Use Grind Stone by Cmd<br>
+              ▸ /loom | Use Loom by Cmd<br>
+              ▸ /smithingtable | Use Smithing Table by Cmd<br>
+              ▸ /stonecutter | Use Stone Cutter by Cmd<br>
+              ▸ /fly | You can fly by This Cmd<br>
+              ▸ /tpa | You can send teleport requests to anyone<br>
+              ▸ /tpahere | You can send someone a teleport request to you<br><br>
+      </section>
+      <section class="rank_feature_text">
+          <b>Perks:</b><br>
+              ▸ 3000৳<br>
+              ▸ You will get bank interest while you are offline<br>
+              ▸ Home set 5x<br>
+              ▸ Claim Block 3000x<br><br>
+      </section>
+      <section class="rank_feature_text">
+          <b>Rewards:</b><br>
+              ▸ Warlord Kit<br>
+              ▸ Netherite Ingot 2x<br>
+              ▸ Diamond 18x<br>
+              ▸ Iron Ingot 32x<br>
+              ▸ Common Crate Key 4x<br>
+              ▸ VIP Crate Key 3x<br>
+              ▸ Rare Crate Key 2x<br>
+              ▸ Legendary Crate Key 1x<br>
+              ▸ Cooked Chicken 192x<br>
+              ▸ Golden Carrot 128x<br>
+              ▸ Enchanted Golden Apple 3x<br><br>
+          
+      </section>
+      <section class="rank_feature_text">
+          <b>Cost:</b>
+              ▸ ৳350
+      </section></a>
+      <a href="https://discord.banglamines.fun" class="main4_dc_button_a">
+        <div class="main4_dc_button">Join Dc To Purchase</div>
+      </a>
+      </div>
+  
+      <div class="rank_feature2">
+        <img class="rank_feature_img" alt="Feature Image" src="media/ranks/Overlord.png">
+        <a class="rank_feature_headline">Overlord</a>
+        <a class="rank_feature_text">
+          <section class="rank_feature_text">
+            <b>Commands:</b><br>
+                ▸ /enderchest - Use Enderchest by Cmd<br>
+                ▸ /workbench - Use Crafting Table by Cmd<br>
+                ▸ /anvil | Use Anvil by Cmd <br>
+                ▸ /cartographytableh | Use Cartography Table by Cmd<br>
+                ▸ /grindstone | Use Grind Stone by Cmd<br>
+                ▸ /loom | Use Loom by Cmd<br>
+                ▸ /smithingtable | Use Smithing Table by Cmd<br>
+                ▸ /stonecutter | Use Stone Cutter by Cmd<br>
+                ▸ /fly | You can fly by This Cmd<br>
+                ▸ /tpa | You can send teleport requests to anyone<br>
+                ▸ /tpahere | You can send someone a teleport request to you<br>
+                ▸ /repair | You can repair your item by this Cmd<br>
+                ▸ /feed | You can fill your hunger bar by this Cmd<br>
+                ▸ /back | You can return to where you died or teleport from<br>
+        </section>
+        <section class="rank_feature_text">
+            <b>Perks:</b><br>
+                ▸ 5000৳<br>
+                ▸ You will get bank interest while you are offline<br>
+                ▸ Home set 6x<br>
+                ▸ Claim Block 5000x<br>
+        </section>
+        <section class="rank_feature_text">
+            <b>Rewards:</b><br>
+                ▸ Overlord Kit<br>
+                ▸ Netherite Ingot 4x<br>
+                ▸ Diamond 32x<br>
+                ▸ Iron Ingot 64x<br>
+                ▸ Common Crate Key 5x<br>
+                ▸ VIP Crate Key 4x<br>
+                ▸ Rare Crate Key 3x<br>
+                ▸ Legendary Crate Key 2x<br>
+                ▸ Cooked Chicken 256x<br>
+                ▸ Golden Carrot 192x<br>
+                ▸ Enchanted Golden Apple 5x<br>
+        </section>
+        <section class="rank_feature_text">
+            <b>Cost:</b>
+                ▸ ৳400
+        </section></a>
+        <a href="https://discord.banglamines.fun" class="main4_dc_button_a">
+          <div class="main4_dc_button">Join Dc To Purchase</div>
+        </a>
+      </div>
+    </div>
+<!------------------------------------------------->
+
+<!---------------------- Discord Server --------------------------->
+      <div id="discord"></div>
+      <div class="main4">
+        <a class="headline">Join our Discord</a>
+        <div class="main4_dc_div">
+          <iframe src="https://discord.com/widget?id=1177891402743549962&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          <div class="main4_dc_description_div">
+            <a class="main4_dc_description_title">Let's talk!</a>
+            <a class="main4_dc_description"> ・Meet other players <br> ・Ask questions <br> ・Get notified about updates <br> ・Give feedback  <br> ・Buy ranks<br> &amp; more </a>
+            <a href="https://discord.banglamines.fun" class="main4_dc_button_a">
+              <div class="main4_dc_button">Join</div>
+            </a>
+          </div>
+        </div>
+      </div>
+<!--------------------------------------------------->
+
+<!---------------------- Staff Menu --------------------------->
+
+      <div id="about"></div>
+      <div class="main5">
+        <a class="headline">Staff Members</a>
+          <div class="main5_owners_div main5_admins_dev_type2">
+            <img class="main5_admins_img" alt="admin member img" src="media/staff/jeet.png">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Owner]</a>
+              <a class="main5_admins_description_title">Jss Jeet</a>
+              <a class="main5_admins_description">From Jeet:-<br>I am a class 10 student of Jhenaidah Government High School. Born on 26th May 2008 in Jhenaidah.Currently, I am a student and the owner of the Minecraft server "Banglamines."</a>
+
+                <ul class="social-icons">
+                  <a href="https://www.facebook.com/Jss.JeeT26" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/Jss.JeeT26" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                  <a href="https://discordapp.com/users/770192305369645076" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+                  <a href="https://www.youtube.com/@JsJeet" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </ul>
+
+            </div>
+          </div>
+
+  <div class="main5_admin_div">
+          <div class="main5_admins_div main5_admins_dev_type1">
+            <img class="main5_admins_img" alt="admin member img" src="media/staff/adnan.jpg">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Co-Owner]</a>
+              <a class="main5_admins_description_title">Adnan Zaman</a>
+              <a class="main5_admins_description">From Adnan:-<br>I am a student. Currently studying in class 10 at Armanitola Govt High School. Born on 28th February 2007 in Dhaka.</a>
+
+              <ul class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61550988234192" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://discordapp.com/users/630083028600750090" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://www.youtube.com/@AdnanXD4200" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+              </ul>
+
+            </div>
+          </div>
+        
+         <div class="main5_admins_div main5_admins_dev_type1">
+          <img class="main5_admins_img" alt="admin member img" src="media/member_placeholder.webp">
+          <div class="main5_admins_description_div">
+            <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Co-Owner]</a>
+            <a class="main5_admins_description_title">Fahan Amin</a>
+            <a class="main5_admins_description">From Fahad:-<br>I am a student currently studying in inter 1st year at Dhaka Imperial Collage. Born on 22th October 2005 in Dhaka.</a>
+
+            <ul class="social-icons">
+              <a href="https://www.facebook.com/fahadamin69" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/sleepingfatcat_" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://discordapp.com/users/480597598953275424" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+              <a href="https://www.youtube.com/@Denji6969_" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            </ul>
+
+          </div>
+        </div>
+</div>
+        <div class="main5_admin_div">
+          <div class="main5_admins_div main5_admins_dev_type1">
+            <img class="main5_admins_img" alt="admin member img" src="media/staff/arghya.jpg">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Head Admin]</a>
+              <a class="main5_admins_description_title">Arghya Biswas</a>
+              <a class="main5_admins_description">From Arghya:-<br>I am a student currently studying in class 10 at Naldanga Bhusan Pilot Secondary School. Born on 5th October 2008 in Jhenaidha.</a>
+
+              <ul class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61552243761422" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/obsessed_raphael" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://discordapp.com/users/925703638603673661" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+                <!--a href="https://www.youtube.com/JsJeet" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a-->
+              </ul>
+
+            </div>
+          </div>
+          <div class="main5_admins_div main5_admins_dev_type1">
+            <img class="main5_admins_img" alt="admin member img" src="media/staff/sabit.jpg">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Head Admin]</a>
+              <a class="main5_admins_description_title">Sabit Hasan</a>
+              <a class="main5_admins_description">From Sabit:-<br>I am a student. Currently studying in class 9 at Balizuri F.M. High School. Born on 30th September 2008 in Jamalpur.</a>
+
+              <ul class="social-icons">
+                <a href="https://www.facebook.com/sabit.hasan.14418" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/sabithasan205" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://discordapp.com/users/909124085169139713" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://www.youtube.com/@SabitPlayzOfficial" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+        <!------------------- Supporter 
+        <div class="main5_supporter_div">
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
+              <a class="main5_supporters_description_title">Replacable Supporter 1</a>
+              <a class="main5_supporters_description">Supporter<br>Description</a>
+            </div>
+        </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
+              <a class="main5_supporters_description_title">Replacable Supporter 2</a>
+              <a class="main5_supporters_description">Supporter<br>Description</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
+              <a class="main5_supporters_description_title">Replacable Supporter 3</a>
+              <a class="main5_supporters_description">Supporter<br>Description</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
+              <a class="main5_supporters_description_title">Replacable Supporter 4</a>
+              <a class="main5_supporters_description">Supporter<br>Description</a>
+            </div>
+          </div>
+          ------------>
+        </div>
+      </div>
+
+<!------------------------------------------------->
+
+<!---------------------- Votes Menu --------------------------->
+
+<div id="vote"></div>
+<div class="main2">
+  <a class="headline">Vote Us</a>
+  <div class="main2_features_div">
+    <div class="vote_feature">
+      <img class="vote_feature_img" alt="Feature Image" src="media/blocks/Diamond.png">
+      <a class="vote_feature_headline">Link 1</a>
+      <a href="https://minecraftservers.org/vote/658486" class="main4_dc_button_a">
+        <div class="main4_dc_button">Click Here</div>
+      </a>
+    </div>
+    <div class="vote_feature">
+      <img class="vote_feature_img" alt="Feature Image" src="media/blocks/Quartz.png">
+      <a class="vote_feature_headline">Link 2</a>
+      <a href="https://minecraft-serverlist.com/server/782/vote" class="main4_dc_button_a">
+        <div class="main4_dc_button">Click Here</div>
+      </a>
+    </div>
+    <div class="vote_feature">
+      <img class="vote_feature_img" alt="Feature Image" src="media/blocks/New Lapiz.png">
+      <a class="vote_feature_headline">Link 3</a>
+      <a href="https://minecraft-mp.com/server/327839/vote/" class="main4_dc_button_a">
+        <div class="main4_dc_button">Click Here</div>
+      </a>
+    </div>
+    <div class="vote_feature">
+      <img class="vote_feature_img" alt="Feature Image" src="media/blocks/Emerald.png">
+      <a class="vote_feature_headline">Link 4</a>
+      <a href="https://minecraft-server-list.com/server/501707/vote/" class="main4_dc_button_a">
+        <div class="main4_dc_button">Click Here</div>
+      </a>
+    </div>
+    <div class="vote_feature">
+      <img class="vote_feature_img" alt="Feature Image" src="media/blocks/Redstone.png">
+      <a class="vote_feature_headline">Link 5</a>
+      <a href="https://topg.org/minecraft-servers/server-660135" class="main4_dc_button_a">
+        <div class="main4_dc_button">Click Here</div>
+      </a>
+    </div>
+  </div>
+
+<!------------------------------------------------->
+
+<!---------------------- IP AND PORT --------------------------->
+
+<div id="join"></div>
+      <div class="main3">
+        <a class="headline">How to join</a>
+        <div class="main3_join_div_div">
+          <div class="main3_join_div">
+            <a class="main3_join_title">Java</a>
+            <div class="main3_join_content_div">
+              <div class="main3_join_categories">
+                <a>IP:</a>
+                <a>Ver:</a>
+              </div>
+              <div class="main3_join_values">
+                <a>play.banglamines.fun</a>
+                <a>1.20 - Latest</a>
+              </div>
+            </div>
+          </div>
+          <div class="main3_join_div">
+            <a class="main3_join_title">Bedrock</a>
+            <div class="main3_join_content_div">
+              <div class="main3_join_categories">
+                <a>IP:</a>
+                <a>Port:</a>
+              </div>
+              <div class="main3_join_values">
+                <a>play.banglamines.fun</a>
+                <a>1913</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!------------------------------------------------->
+
+    <footer class="copyright_div">
+      <a href="" class="copyright">Made by Banglamines Team - Edited by Jss Jeet (2024)</a>
+    </footer>
+  </body>
+</html>
